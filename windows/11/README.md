@@ -25,3 +25,19 @@ https://www.youtube.com/watch?v=ZCDRDE5Uhp0
 https://gist.github.com/asheroto/c4a9fb4e5e5bdad10bcb831e3a3daee6
 
 ## Make Win11 ISO
+```
+mkisofs   -no-emul-boot \
+  -b "boot/etfsboot.com" \
+  -boot-load-seg 0 \
+  -boot-load-size 8 \
+  -eltorito-alt-boot \
+  -eltorito-platform efi \
+  -no-emul-boot \
+  -b "efi/microsoft/boot/efisys.bin" \
+  -boot-load-size 1 \
+  -iso-level 4 \
+  -UDF \
+  -o ~/Downloads/Win11_22H2-test.iso \
+  .
+
+```
