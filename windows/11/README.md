@@ -1,6 +1,8 @@
 # Notes for making a custom windows 11 image
 
-## Create the Unattend.xml
+## Create the AutoUnattend.xml
+
+https://www.windowsafg.com/win10x86_x64_uefi.html
 
 https://schneegans.de/windows/unattend-generator/
 
