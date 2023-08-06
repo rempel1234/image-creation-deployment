@@ -2,6 +2,10 @@
 
 ## Create the AutoUnattend.xml
 
+1. Mount the Windows 11 ISO
+1. Create an empty folder and copy **D:\Sources\install.wim** into it
+1. 
+
 https://www.elevenforum.com/t/create-custom-windows-11-iso-file.443/
 
 https://www.windowsafg.com/win10x86_x64_uefi.html
