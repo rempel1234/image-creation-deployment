@@ -1,10 +1,17 @@
 # Notes for making a custom windows 11 image
+## Extracting the ISO
+```
+7z x Win11_22H2_English_x64v2.iso -oWin11_22H2
 
-## Create the AutoUnattend.xml
+```
+## Update the AutoUnattend.xml
 
 1. Mount the Windows 11 ISO
 1. Create an empty folder and copy **D:\Sources\install.wim** into it
-1. 
+1. Uncheck the read-only square
+1. Open Windows System Image Manager
+1. Load the install.wim into it
+1. Open the Autounattend.xml
 
 https://www.elevenforum.com/t/create-custom-windows-11-iso-file.443/
 
