@@ -9,4 +9,11 @@
 
 ## Create a kickstart file for Oracle Linux 8
 
+1. Install Oracle Linux with as close to the desired configuration as possible
+
+### Install Requirements ###
+
+https://docs.oracle.com/en/operating-systems/oracle-linux/8/install/install-PreparingToInstall.html#install-requirements
+
+
 ### Generating the anaconda.ks
