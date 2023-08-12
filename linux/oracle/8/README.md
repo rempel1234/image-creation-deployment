@@ -1,5 +1,14 @@
 # How to create, update, and use a kickstart file for Oracle Linux 8
 
+First off, if you just want to use this copy 
+
+1. ks.cfg to the root directory of the ISO
+1. isolinux.cfg to the isolinux directory of the ISO
+1. grup.cfg to the EFI/BOOT directory of the ISO
+1. make an EFI bootable ISO from that
+
+Please note, if you didn't do anything to convert the updated folder to an ISO, it won't kickstart...
+
 ## Download the Oracle Linux 8 ISO
 
 1. Browse to https://www.oracle.com/linux/technologies/oracle-linux-downloads.html
