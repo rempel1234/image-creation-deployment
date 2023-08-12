@@ -25,6 +25,10 @@ Please note, if you didn't do anything to convert the updated folder to an ISO, 
    mkdir OracleLinux-R8-U8
    cd OracleLinux-R8-U8
    isoinfo.exe -R -X -i ../OracleLinux-R8-U8-x86_64-dvd.iso
+   # some dump reason it's read-only, so make a read-write copy
+   cd ..
+   cp OracleLinux-R8-U8 OracleLinux-R8-U8-copy
+   cd OracleLinux-R8-U8-copy
    ```
 1. edit the isolinux/isolinux.cfg to use the kickstart file
 1. edit the EFI/BOOT/grub.cfg to use the kickstart file
