@@ -19,7 +19,19 @@
    ```
 1. edit the isolinux/isolinux.cfg to use the kickstart file
 1. edit the EFI/BOOT/grub.cfg to use the kickstart file
-    
+
+
+## Creating the custom ISO
+
+```
+mkisofs -o ~/Downloads/ol8-test.iso \
+-b isolinux/isolinux.bin -J -R -l -c isolinux/boot.cat \
+-no-emul-boot -boot-load-size 4 \
+-boot-info-table -eltorito-alt-boot -b images/efiboot.img \
+-no-emul-boot -graft-points -joliet-long \
+-V "OL-8-8-0-BaseOS-x86_64" .
+```
+
 ### Install Requirements ###
 
 https://docs.oracle.com/en/operating-systems/oracle-linux/8/install/install-PreparingToInstall.html#install-requirements
