@@ -10,7 +10,16 @@
 ## Create a kickstart file for Oracle Linux 8
 
 1. Install Oracle Linux with as close to the desired configuration as possible
-
+1. Copy the /root/anaconda-kickstart.cfg
+1. Extract the Oracle Linux 8 ISO
+   ```
+   mkdir OracleLinux-R8-U8
+   cd OracleLinux-R8-U8
+   isoinfo.exe -R -X -i ../OracleLinux-R8-U8-x86_64-dvd.iso
+   ```
+1. edit the isolinux/isolinux.cfg to use the kickstart file
+1. edit the EFI/BOOT/grub.cfg to use the kickstart file
+    
 ### Install Requirements ###
 
 https://docs.oracle.com/en/operating-systems/oracle-linux/8/install/install-PreparingToInstall.html#install-requirements
