@@ -1,4 +1,83 @@
 # Notes for making a custom windows 11 image
+
+## Pare down to one Windows 11 image
+
+Get the list of images available
+
+```
+
+Dism /Get-WimInfo /WimFile:"c:\iso_files\sources\install.wim"
+
+...
+
+Index : 10
+Name : Windows 11 Pro for Workstations
+Description : Windows 11 Pro for Workstations
+Size : 16,781,355,713 bytes
+
+```
+
+Select the desired image
+
+```
+Dism /export-image /SourceImageFile:c:\iso_files\sources\install.wim /SourceIndex:10 /DestinationImageFile:c:\iso_files\install.wim /Compress:max /CheckIntegrity
+```
+
+Overwrite the image
+
+```
+move c:\ISO_Files\install.wim c:\ISO_Files\sources\install.wim
+...
+Overwrite c:\ISO_Files\sources\install.wim? (Yes/No/All): yes
+        1 file(s) moved.
+```
+
+Verify there's only one edition left
+
+```
+
+Dism /Get-WimInfo /WimFile:"c:\iso_files\sources\install.wim"
+
+Deployment Image Servicing and Management tool
+Version: 10.0.22621.1
+
+Details for image : c:\iso_files\sources\install.wim
+
+Index : 1
+Name : Windows 11 Pro for Workstations
+Description : Windows 11 Pro for Workstations
+Size : 16,781,355,713 bytes
+
+The operation completed successfully.
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Extracting the ISO
 ```
 7z x Win11_22H2_English_x64v2.iso -oWin11_22H2
