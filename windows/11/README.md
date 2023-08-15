@@ -52,6 +52,14 @@ The operation completed successfully.
 
 ```
 
+### Open Tabs
+
+https://www.elevenforum.com/t/create-custom-windows-11-iso-file.443/
+
+https://www.tenforums.com/tutorials/165836-how-add-remove-optional-features-windows-install-media.html
+
+https://woshub.com/remove-built-apps-features-editions-install-wim-image/
+
 Finally, generate the .iso
 ```
 oscdimg.exe -m -o -u2 -udfver102 -bootdata:2#p0,e,bc:\iso_files\boot\etfsboot.com#pEF,e,bc:\iso_files\efi\microsoft\boot\efisys.bin c:\iso_files c:\MyISO.iso
