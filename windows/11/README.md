@@ -52,6 +52,10 @@ The operation completed successfully.
 
 ```
 
+Finally, generate the .iso
+```
+oscdimg.exe -m -o -u2 -udfver102 -bootdata:2#p0,e,bc:\iso_files\boot\etfsboot.com#pEF,e,bc:\iso_files\efi\microsoft\boot\efisys.bin c:\iso_files c:\MyISO.iso
+```
 
 
 
